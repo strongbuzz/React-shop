@@ -11,7 +11,7 @@ export default function SearchBar() {
                 onChange={e => {}}
                 className="form-control ms-md-auto me-2"
             />
-            asdsdfsdfdsdfsdff giyun i hyuong
+            giyun i hyuong
         </form>
     );
 }
