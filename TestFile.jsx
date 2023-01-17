@@ -5,7 +5,9 @@ export default function SearchBar() {
             <input
                 type="text"
                 placeholder="Search Products"
-                onChange={e => {}}
+                onChange={e => {
+                    e.preventDefault;
+                }}
                 className="form-control ms-md-auto me-2"
             />
         </form>
