@@ -8,7 +8,7 @@ export default function SearchBar() {
                 onChange={e => {}}
                 className="form-control ms-md-auto me-2"
             />
-            asdsdf
+            asdsdfsdfdf
         </form>
     );
 }
