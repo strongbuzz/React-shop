@@ -10,7 +10,7 @@ export default function SearchBar() {
                 }}
                 className="form-control ms-md-auto me-2"
             />
-            hello
+            hellooo
         </form>
     );
 }
