@@ -1,9 +1,6 @@
 export default function SearchBar() {
     return (
-        <form
-            onSubmit={e => e.preventDefault}
-            className="d-flex ms-md-0 ms-lg-3"
-        >
+        <form className="d-flex ms-md-0 ms-lg-3">
             {" "}
             <input
                 type="text"
