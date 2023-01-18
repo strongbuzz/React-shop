@@ -1,7 +1,7 @@
 export default function SearchBar() {
     return (
         <form
-            onSubmit={e => e.preventDefault}
+            onSubmit={e => e.preventDefault()}
             className="d-flex ms-md-0 ms-lg-3"
         >
             {" "}
@@ -11,7 +11,7 @@ export default function SearchBar() {
                 onChange={e => {}}
                 className="form-control ms-md-auto me-2"
             />
-            asdsdfsdfdsdfsdff giyun i hyuong
+            giyun ii hyuong
         </form>
     );
 }
