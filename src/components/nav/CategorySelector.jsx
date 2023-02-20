@@ -1,25 +1,26 @@
 export default function CategorySelector() {
+    const title = "All";
+    const categories = ["All", "Jackets", "Scarfs", "Gloves", "Hats", "Socks"];
 
-    const title ="All"
-    const categories = ["All", "Jackets", "Scarfs", "Gloves", "Hats", "Socks"]
-
-    return(
+    return (
         <div className="dropdown mb-3 mb-lg-0">
-            <button className="btn btn-outline-success text-white dropdwon-toggle"
-                    type="button"
-                    id ="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
+            <button
+                className="btn btn-outline-success text-white dropdwon-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
             >
-                { title }
+                {title}
             </button>
             <ul className="dropdown-menu">
-                {categories.map((category)=>(
+                {categories.map(category => (
                     <li key={category}>
-                    <a href="#" className="dropdown-item pointer">{category}</a>
-                </li>
+                        <a href="#" className="dropdown-item pointer">
+                            {category}
+                        </a>
+                    </li>
                 ))}
-                
             </ul>
         </div>
-    )
+    );
 }
