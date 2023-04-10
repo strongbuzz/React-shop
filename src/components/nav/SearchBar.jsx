@@ -1,20 +1,23 @@
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { actions as productsActions } from "../../global/slices/productsSlice";
+// import { actions } from "../../global/slices/cartSlice";
 
 export default function SearchBar() {
-    const [text, setText] = useState("");
+    const { searchTerm } = useSelector(state => state.products);
+
+    const dispatch = useDispatch();
+
     return (
-        <form
-            onSubmit={e => e.preventDefault()}
-            className="d-flex ms-0 ms-lg-3"
-        >
+        <form onSubmit={e => e.preventDefault()} className="d-flex ms-0 ms-lg-3">
             {" "}
             <input
-                type="text"
+                type="search"
                 placeholder="Search Products"
-                onChange={e => {
-                    setText(e.target.value);
-                }}
                 className="form-control ms-md-auto me-2"
+                onChange={e => {
+                    dispatch(productsActions.setSearchTerm(e.target.value));
+                }}
+                value={searchTerm}
             />
         </form>
     );

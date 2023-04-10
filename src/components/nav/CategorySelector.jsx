@@ -1,6 +1,11 @@
+import { useSelector, useDispatch } from "react-redux";
+import { actions as productsActions } from "../../global/slices/productsSlice";
+
 export default function CategorySelector() {
     const title = "All";
-    const categories = ["All", "Jackets", "Scarfs", "Gloves", "Hats", "Socks"];
+    const dispatch = useDispatch();
+
+    const { categories, selectedCategory } = useSelector(state => state.products);
 
     return (
         <div className="dropdown mb-3 mb-lg-0">
@@ -10,11 +15,16 @@ export default function CategorySelector() {
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
             >
-                {title}
+                {selectedCategory}
             </button>
             <ul className="dropdown-menu">
                 {categories.map(category => (
-                    <li key={category}>
+                    <li
+                        onMouseEnter={() =>
+                            dispatch(productsActions.setSelectedCategory(category))
+                        }
+                        key={category}
+                    >
                         <a href="#" className="dropdown-item pointer">
                             {category}
                         </a>
